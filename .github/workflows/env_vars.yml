@@ -1,0 +1,9 @@
+name: Environment Variables
+on: push
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        env:
+            BRANCH: main1   # ジョブレベルで環境変数を設定
+        steps:
+            - run: echo "${{env.BRANCH}}" # ジョブレベルの環境変数の参照
