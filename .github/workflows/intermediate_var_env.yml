@@ -1,0 +1,10 @@
+name: Intermdeiate environment variable
+on: push
+jobs:
+    print:
+        runs-on: ubuntu-latest
+        env:
+            ACTOR: $"{{ github.actr }}"
+        steps:
+            - run: echo "${ACTOR}"
+            
