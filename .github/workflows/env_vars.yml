@@ -8,5 +8,5 @@ jobs:
         steps:
             - run: echo "${BRANCH}" # ジョブレベルの環境変数の参照
             - uses: actions/checkout@v4
-            with:
+              with:
                 ref: ${{ env.BRANCH }} # 環境変数を使用してブランチを指定
